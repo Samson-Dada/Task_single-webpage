@@ -10,20 +10,54 @@ body {
 }
 
 .header {
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1rem 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.header__top {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
 }
 .logo__box {
   display: flex;
   align-items: center;
   color: #0134b7b8;
   font-size: 1.7rem;
+  margin-bottom: 2rem;
 }
+
+.header__layout {
+  justify-content: space-between;
+  /* display: flex; */
+}
+.nav__toggle-icon {
+  border-top: 2px solid #0134b7b8;
+}
+.nav__toggle-icon::before,
+.nav__toggle-icon::after {
+  background-color: #0134b7b8;
+
+  content: "";
+  display: block;
+  width: 20px;
+  margin-top: 0.3rem;
+}
+.nav__toggle-icon::before {
+  border-top: 2px solid #0134b7b8;
+}
+
+.nav__toggle-icon::after {
+  border-top: 2px solid #0134b7b8;
+}
+#nav-toggle {
+  display: none;
+}
+
 .nav {
-  padding-right: 3rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 .nav a {
   margin-right: 2rem;
@@ -43,15 +77,13 @@ body {
 .hero__section {
   padding: 2rem 1.5rem 2rem 1.5rem;
   margin-bottom: 3rem;
-  display: flex;
-  gap: 6rem;
 }
 .hero__content {
-  width: 50%;
+  text-align: left;
 }
 .hero__title {
-  font-size: 4rem;
-  line-height: 90px;
+  font-size: 1.9rem;
+  line-height: 3rem;
 }
 .hero__text {
   margin: 2rem 0;
@@ -61,49 +93,39 @@ body {
 
 .hero__btn {
   font-size: 1.1rem;
-  text-align: left;
   padding: 0.6rem 5rem 0.6rem 1rem;
   border: none;
   border-radius: 4px;
   color: #fff;
   background: #0134b7b8;
 }
-.profile {
-}
+
 .profile__image {
-  width: 60%;
+  width: 100%;
 }
 .update__section {
-  margin-top: 3rem;
-  padding-left: 2rem;
-  display: flex;
-  gap: 5rem;
-  align-items: center;
+  padding: 1rem 1.5rem 1rem;
   background: #eae1100f;
 }
-.update__image-box {
-  /* 
-}
+
 .update__image {
-  /* width: 100%; */
+  width: 100%;
 }
-.update__text {
-  width: 40%;
+.update__text-box {
+  margin-top: 2rem;
 }
 .update__text-quote {
-  font-size: 8rem;
+  font-size: 4rem;
   color: #0e0e0e2e;
 }
-.update__desc {
-  /* font-size: 0.9rem; */
-  line-height: 1.2rem;
+.update__text {
+  line-height: 1.4rem;
   color: #666;
 }
 .update__title-box {
-  /* margin-top: 3rem; */
   display: flex;
   align-items: center;
-  gap: 6rem;
+  gap: 3rem;
 }
 .update__title {
   /* width: 70%; */
@@ -113,18 +135,12 @@ body {
 }
 
 .contact__section {
-  width: 70%;
-  display: flex;
-  align-items: center;
-  padding: 2rem 2rem 2rem 0;
-  margin: 4.5rem auto;
+  margin: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 .contact__section div {
-  display: flex;
-  gap: 1rem;
-  margin-left: 8rem;
+  padding: 1.5rem 0 1.5rem 2rem;
 }
 .contact__section p {
   display: flex;
@@ -138,11 +154,7 @@ body {
   font-size: 0.7rem;
 }
 .footer {
-  width: 70%;
   padding: 2rem;
-  margin: 1rem 2rem 3rem 4rem;
-  display: flex;
-  justify-content: space-between;
 }
 .footer__link {
   margin-top: 2rem;
@@ -176,9 +188,183 @@ body {
 }
 
 .footer__update {
+  margin-top: 2rem;
 }
 .footer__update p {
   font-size: 0.8rem;
   padding-top: 0.6rem;
   color: #0e0e0eaf;
+}
+
+/* */
+/*----- 8.1 768PX (TABLET SIZE) ---*/
+
+@media screen and (min-width: 768px) {
+  /* NAV */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo__box {
+    margin-top: 1rem;
+  }
+
+  .nav__toggle-icon {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+
+  .hero__title {
+    font-size: 3.2rem;
+    width: 90%;
+    line-height: 4rem;
+  }
+}
+
+/*-----(LAPTOP BIG SIZE) -----*/
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: block;
+  }
+  .hero__section {
+    margin-top: 2rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .hero__content {
+    width: 80%;
+  }
+  .hero__title {
+    font-size: 3rem;
+    line-height: 90px;
+  }
+  .hero__text {
+    margin: 2rem 0;
+    color: #666;
+    font-size: 1.2rem;
+  }
+
+  .hero__btn {
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 0.6rem 5rem 0.6rem 1rem;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background: #0134b7b8;
+  }
+
+  .profile__image {
+    width: 60%;
+  }
+  .update__section {
+    margin-top: 3rem;
+    padding-left: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: #eae1100f;
+  }
+
+  .update__image {
+    width: 50%;
+  }
+  .update__text-box {
+    width: 40%;
+  }
+  .update__text-quote {
+    font-size: 8rem;
+    color: #0e0e0e2e;
+  }
+  .update__text {
+    line-height: 1.2rem;
+    color: #666;
+  }
+  .update__title-box {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+  .update__title {
+    /* width: 70%; */
+    font-weight: 600;
+    color: #0134b7b8;
+    font-size: 1.2rem;
+  }
+
+  .contact__section {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem 1rem 0;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  .contact__section div {
+    display: flex;
+    gap: 1rem;
+    margin-left: 4rem;
+  }
+  .contact__section p {
+    display: flex;
+    flex-direction: column;
+    color: #444;
+    row-gap: 0.3rem;
+    font-size: 0.8rem;
+  }
+  .contact__section span {
+    color: #666;
+    font-size: 0.7rem;
+  }
+  .footer {
+    width: 70%;
+    padding: 2rem;
+    margin: 1rem 2rem 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__link {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.4rem;
+  }
+  .footer__logo {
+    font-size: 1.4rem;
+    color: #0134b7b8;
+    display: flex;
+    align-items: center;
+    column-gap: 0.9rem;
+  }
+  .footer__social {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer__icon {
+    width: 18px;
+    height: 20px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #0134b7b8;
+  }
+
+  .footer__title {
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+    color: rgb(0, 163, 71);
+  }
+
+  .footer__update p {
+    font-size: 0.8rem;
+    padding-top: 0.6rem;
+    color: #0e0e0eaf;
+  }
 }

@@ -9,17 +9,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <header class="header">
+    <header class="header">
+      <div class="header__top">
         <div class="logo__box">
           <object data="./logo.svg" type="" class="logo"></object>
           <p>sail</p>
         </div>
-        <nav class="nav">
-          <a href="#" class="nav__link-1">Sign In</a>
-          <a href="#" class="nav__link-2">Find help</a>
-        </nav>
-      </header>
+        <input type="checkbox" name="" id="nav-toggle" />
+        <label for="nav-toggle" class="nav__toggle-icon"></label>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav__link-1">Sign In</a>
+        <a href="#" class="nav__link-2">Find help</a>
+      </nav>
+    </header>
+    <main>
       <section class="hero__section">
         <div class="hero__content">
           <h1 class="hero__title">I Samson Dada Participated in Sail Intactive Program</h1>
@@ -38,9 +42,9 @@
       <section class="update__section">
         <img src="./pic-group.jpg" alt="Gallery Photo" class="update__image" />
 
-        <div class="update__text">
+        <div class="update__text-box">
           <span class="update__text-quote"> &#8220; </span>
-          <p class="update__desc">
+          <p class="update__text">
             SAIL (SENATOR ABIRU INNOVATION LAB) is a unique space that offers cross-functional programmes and opportunities, as well as a basic
             foundation that can inspire young people in Lagos East (students, graduates, entrepreneurs, job seekers) to gather, learn and create. The
             space will foster a comfortable and safe environment that will encourage young people to see it as their second home
@@ -105,16 +109,5 @@
         </div>
       </footer>
     </main>
-    <!--
-
-
-    The primary purpose of the innovation space is to create employment opportunities, inspire grass-roots innovations and build partnerships & networks that will drive economic prosperity and collaboratively solve significant social and business problems. 
-
-    2nd
-
-    SAIL (SENATOR ABIRU INNOVATION LAB) is a unique space that offers cross-functional programmes and opportunities, as well as a basic foundation that can inspire young people in Lagos East (students, graduates, entrepreneurs, job seekers) to gather, learn and create. The space will foster a comfortable and safe environment that will encourage young people to see it as their second home
-
-    UNDER
-    SenatorTokunbo Abiru of the Lagos East Constituency,
-  --></body>
+  </body>
 </html>
